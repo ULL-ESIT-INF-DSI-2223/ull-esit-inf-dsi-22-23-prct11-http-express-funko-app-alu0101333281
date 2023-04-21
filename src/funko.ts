@@ -1,102 +1,110 @@
 /**
- * Lista de enumerados que indican el tipo de funko.
+ * Una lista de los diferentes tipos de Funko que se pueden tener.
  */
- export enum Types {
-    Pop = "Pop!",
-    PopRides = "Pop! Rides",
-    Soda = "Vynil Soda",
-    Gold = "Vynil Gold"
+ export enum FunkoType {
+    POP = "Pop!",
+    POP_RIDES = "Pop! Rides",
+    VINYL_SODA = "Vinyl Soda",
+    VINYL_GOLD = "Vinyl Gold"
 }
 
 /**
- * Clase que representa a un funko.
+ * Clase que representa un Funko.
  */
 export class Funko {
     /**
-     * Constructor de clase.
-     * @param _id Id único del funko.
-     * @param _name Nombre del funko.
-     * @param _description Descripción del funko.
-     * @param _type Tipo del funko.
-     * @param _gender Género del personaje del funko.
-     * @param _franchise Franquicia del funko.
-     * @param _number Número del funko en la franquicia.
-     * @param _exclusive Indica si el funko es exclusivo o no.
-     * @param _specialCaracteristics Características especiales del funko.
-     * @param _value Valor del funko.
+     * Crea una nueva instancia de Funko.
+     * @param id Un identificador único para el Funko.
+     * @param name El nombre del Funko.
+     * @param description Una descripción del Funko.
+     * @param type El tipo de Funko, de la enumeración FunkoType.
+     * @param gender El género del personaje del Funko.
+     * @param franchise La franquicia a la que pertenece el Funko.
+     * @param number El número del Funko dentro de la franquicia.
+     * @param isExclusive Indica si el Funko es exclusivo.
+     * @param specialFeatures Características especiales del Funko.
+     * @param value El valor del Funko.
      */
-    constructor(private _id: number, private _name: string, private _description: string, private _type: Types, 
-        private _gender: string, private _franchise: string, private _number: number, private _exclusive: boolean, 
-        private _specialCaracteristics: string, private _value: number) {}
+    constructor(
+        private id: number, 
+        private name: string, 
+        private description: string, 
+        private type: FunkoType, 
+        private gender: string, 
+        private franchise: string, 
+        private number: number, 
+        private isExclusive_: boolean, 
+        private specialFeatures: string, 
+        private value: number
+    ) {}
 
     /**
-     * Devuelve el id del funko.
+     * Obtiene el identificador único del Funko.
      */
-    get id(): number {
-        return this._id;
+    public getId(): number {
+        return this.id;
     }
 
     /**
-     * Devuelve el nombre del funko.
+     * Obtiene el nombre del Funko.
      */
-    get name(): string {
-        return this._name;
+    public getName(): string {
+        return this.name;
     }
 
     /**
-     * Devuelve la descripción del funko.
+     * Obtiene la descripción del Funko.
      */
-    get description(): string {
-        return this._description;
+    public getDescription(): string {
+        return this.description;
     }
 
     /**
-     * Devuelve el tipo del funko.
+     * Obtiene el tipo del Funko.
      */
-    get type(): Types {
-        return this._type;
+    public getType(): FunkoType {
+        return this.type;
     }
 
     /**
-     * Devuelve el género del personaje del funko.
+     * Obtiene el género del personaje del Funko.
      */
-    get gender(): string {
-        return this._gender;
+    public getGender(): string {
+        return this.gender;
     }
 
     /**
-     * Devuelve la franquicia del funko.
+     * Obtiene la franquicia a la que pertenece el Funko.
      */
-    get franchise(): string {
-        return this._franchise;
+    public getFranchise(): string {
+        return this.franchise;
     }
 
     /**
-     * Devuelve el numero del funko en la franquicia.
+     * Obtiene el número del Funko dentro de la franquicia.
      */
-    get number(): number {
-        return this._number;
+    public getNumber(): number {
+        return this.number;
     }
 
     /**
-     * Devuelve si el funko es exclusivo o no.
+     * Indica si el Funko es exclusivo.
      */
-    get exclusive(): boolean {
-        return this._exclusive;
+    public isExclusive(): boolean {
+        return this.isExclusive_;
     }
 
     /**
-     * Devuelve las características especiales del funko.
+     * Obtiene las características especiales del Funko.
      */
-    get specialCharacteristics(): string {
-        return this._specialCaracteristics;
+    public getSpecialFeatures(): string {
+        return this.specialFeatures;
     }
 
     /**
-     * Devuelve el valor del funko.
+     * Obtiene el valor del Funko.
      */
-    get value(): number {
-        return this._value;
+    public getValue(): number {
+        return this.value;
     }
 }
-
