@@ -1,7 +1,7 @@
 /**
  * Una lista de los diferentes tipos de Funko que se pueden tener.
  */
- export enum FunkoType {
+export enum FunkoType {
     POP = "Pop!",
     POP_RIDES = "Pop! Rides",
     VINYL_SODA = "Vinyl Soda",
@@ -12,6 +12,9 @@
  * Clase que representa un Funko.
  */
 export class Funko {
+    getSpecialCharacteristics() {
+        throw new Error("Method not implemented.");
+    }
     /**
      * Crea una nueva instancia de Funko.
      * @param id Un identificador único para el Funko.
