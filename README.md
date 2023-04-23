@@ -117,6 +117,8 @@ describe('execmd endpoint', () => {
 ## Conclusion
 El uso de HTTP y Express es fundamental en el desarrollo de aplicaciones web modernas y su utilización adecuada puede permitir la construcción de aplicaciones web seguras, escalables y eficientes. Tambien el uso de TypeScript  proporciona una solución sólida y escalable para la gestión de registros y permite el uso de herramientas como Github Actions, Coveralls y Sonar Cloud para asegurar la calidad del código. El uso de Typedoc y las metodologías de desarrollo TDD con Mocha y Chai también contribuyen a un proceso de desarrollo robusto y seguro.
 
+Cabe destacar que los test y el cubrimiento no pasan debido a que el servidor no esta escuchando peticiones del cliente por lo cual salen erroneas las pruebas. 
+
 
 ## Referencias
 
